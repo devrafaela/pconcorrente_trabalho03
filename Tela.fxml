@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="painel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaController">
+   <children>
+      <ImageView fitHeight="540.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/cenario-completo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="540.0" fitWidth="800.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/trilhos.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgButtonPlay" accessibleRole="BUTTON" fitHeight="26.0" fitWidth="80.0" layoutX="31.0" layoutY="420.0" onMouseClicked="#buttonIniciar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/botao-inciar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="42.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/som.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="105.0" layoutX="163.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/trem-verde.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="105.0" layoutX="307.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true" scaleX="-1.0">
+         <image>
+            <Image url="@view/trem-roxo.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="34.0" fitWidth="18.0" layoutX="254.0" layoutY="475.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/velocidade-mais.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="34.0" fitWidth="18.0" layoutX="156.0" layoutY="475.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/velocidade-menos.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="34.0" fitWidth="18.0" layoutX="402.0" layoutY="475.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/velocidade-mais.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="34.0" fitWidth="18.0" layoutX="303.0" layoutY="475.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/velocidade-menos.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="145.0" layoutX="469.0" layoutY="448.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/opcao1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="145.0" layoutX="468.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/opcao3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="145.0" layoutX="651.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/opcao2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="145.0" layoutX="651.0" layoutY="499.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@view/opcao4.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="checkBox1" layoutX="449.0" layoutY="459.0" mnemonicParsing="false">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkBox3" layoutX="449.0" layoutY="508.0" mnemonicParsing="false">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkBox2" layoutX="632.0" layoutY="459.0" mnemonicParsing="false">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkBox4" layoutX="632.0" layoutY="508.0" mnemonicParsing="false">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </CheckBox>
+      <ChoiceBox fx:id="choiceBoxSolutions" layoutX="490.0" layoutY="405.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="225.0" />
+      <ImageView fx:id="imgTrainPosition11" fitHeight="29.0" fitWidth="79.0" layoutX="1.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@view/trem-verde.png" />
+         </image></ImageView>
+      <CheckBox fx:id="checkBoxMusic" layoutX="20.0" layoutY="485.0" mnemonicParsing="false" onAction="#buttonPause" selected="true">
+         <font>
+            <Font size="10.0" />
+         </font></CheckBox>
+      <Line fx:id="line_img_routeY" endX="-29.0" endY="-40.0" layoutX="37.0" layoutY="283.0" opacity="0.27" startX="-29.0" startY="66.0" visible="false" />
+      <Line fx:id="line_img_routeX" endX="714.0" endY="67.0" layoutX="74.0" layoutY="231.0" opacity="0.27" startX="-60.96142578125" startY="67.0" visible="false" />
+      <ImageView fx:id="imgTrainPosition21" fitHeight="29.0" fitWidth="79.0" layoutX="2.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@view/trem-verde.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgTrainPosition22" fitHeight="29.0" fitWidth="79.0" layoutX="734.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true" scaleX="-1.0" visible="false">
+         <image>
+            <Image url="@view/trem-roxo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgTrainPosition12" fitHeight="29.0" fitWidth="79.0" layoutX="734.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" scaleX="-1.0" visible="false">
+         <image>
+            <Image url="@view/trem-roxo.png" />
+         </image>
+      </ImageView>
+      <Slider fx:id="sliderTrem_1" layoutX="162.0" layoutY="497.0" minorTickCount="4" onMouseDragged="#controleDeVelocidade" prefHeight="10.0" prefWidth="107.0" />
+      <Slider fx:id="sliderTrem_2" layoutX="310.0" layoutY="497.0" minorTickCount="4" onMouseDragged="#controleDeVelocidade" prefHeight="10.0" prefWidth="107.0" />
+      <Label fx:id="labelVelocidade_1" layoutX="160.0" layoutY="513.0" prefHeight="17.0" prefWidth="113.0" />
+      <Label fx:id="labelVelocidade_2" layoutX="307.0" layoutY="513.0" prefHeight="17.0" prefWidth="113.0" />
+      <Polyline fx:id="polyline_1" fill="#80ff0001" layoutX="56.0" layoutY="271.0" opacity="0.19" points="-55.0, -26.0, 42.5, -26.0, 71.5, 26.666656494140625, 226.5, 26.666656494140625, 264.5, -26.0, 416.5, -26.0, 460.5, 26.666656494140625, 610.5, 26.666656494140625, 653.5, -26.0, 742.03857421875, -26.0" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeWidth="2.0" visible="false" />
+      <Polyline fx:id="polyline_2" fill="#80ff0001" layoutX="53.0" layoutY="326.0" opacity="0.15" points="741.7052612304688, 23.666656494140625, 664.3718872070312, 23.666656494140625, 589.03857421875, -28.666656494140625, 483.03857421875, -28.666656494140625, 412.03857421875, 23.666656494140625, 281.03857421875, 23.666656494140625, 210.0, -28.666656494140625, 109.66667175292969, -28.666656494140625, 22.371910095214844, 23.666656494140625, -49.62809371948242, 23.666656494140625" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeWidth="2.0" visible="false" />
+      <Polyline fx:id="polyline_3" fill="#80ff0001" layoutX="58.0" layoutY="327.0" opacity="0.15" points="-58.0, 23.666656494140625, 20.166664123535156, 23.666656494140625, 94.83332824707031, -28.666656494140625, 206.83334350585938, -28.666656494140625, 270.8333435058594, 23.666656494140625, 402.8333435058594, 23.666656494140625, 477.5, -28.666656494140625, 585.5, -28.666656494140625, 664.1666870117188, -83.5, 740.53857421875, -83.5" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeWidth="2.0" visible="false" />
+      <Polyline fx:id="polyline_4" fill="#80ff0001" layoutX="63.0" layoutY="336.0" opacity="0.15" points="-63.0, 13.333343505859375, 22.371910095214844, 13.333343505859375, 93.83332824707031, -37.333343505859375, 197.83334350585938, -37.333343505859375, 272.5, -93.33332824707031, 399.1666564941406, -93.33332824707031, 471.16668701171875, -37.333343505859375, 581.8333129882812, -37.333343505859375, 646.9584350585938, 13.333343505859375, 737.0, 13.333343505859375" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeWidth="2.0" />
+   </children>
+</Pane>
